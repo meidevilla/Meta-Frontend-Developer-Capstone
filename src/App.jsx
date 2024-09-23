@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Homepage from './pages/Homepage';
 import BookingPage from './pages/BookingPage';
 import Footer from './components/Footer'
+import BookingConfirmationPage from './pages/BookingConfirmationPage';
 import './App.css'
 
 // Bootstrap CSS
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/reservations" element={<BookingPage />} />
+        <Route path="/confirmed" element={<BookingConfirmationPage />}></Route>
       </Routes>
       <Footer />
     </Router>

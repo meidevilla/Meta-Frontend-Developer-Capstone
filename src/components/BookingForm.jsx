@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom"
 
 const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     console.log(dispatch)
@@ -25,7 +26,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
       }))
     dispatch({ type: 'UPDATE_TIMES', payload: value })
     }
-
+    
     const handleSubmit = (event) => {
       event.preventDefault()
       submitForm(formData)
