@@ -1,45 +1,47 @@
 import React, { useState, useReducer } from 'react'
 import BookingForm from '../components/BookingForm'
+import { fetchAPI, submitAPI } from '../api'
 import photo1 from '../assets/booking-photo.jpg'
 import photo2 from '../assets/booking-photo-2.jpg'
 
-  const initialState = {
-    availableTimes: ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'],
-  };
-
-  const availableTimesReducer = (state, action) => {
-    switch (action.type) {
-      case 'UPDATE_TIMES':
-        return {
-          ...state,
-          availableTimes: action.payload,
-        };
-      default:
-        return state;
-    }
+  function initializeTimes(date) {
+    return fetchAPI(date)
   }
 
-  const initializeTimes = () => {
-    return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
-  };
-
   const updateTimes = (date) => {
-    return initializeTimes();
+    const dateObj = new Date(date)
+    return fetchAPI(dateObj)
+  }
+
+  function reducer(state, action) {
+    let newState
+    switch (action.type) {
+      case 'UPDATE_TIMES':
+      const newDate = new Date(action.payload);
+      newState = updateTimes(newDate)
+      break;
+
+      default:
+        throw new Error()
+    }
+    return newState
+  }
+
+  function submitForm(formData) {
+    const isSubmitted = submitAPI(formData);
+
   }
 
   const BookingPage = () => {
-    const [state, dispatch] = useReducer(availableTimesReducer, initialState);
-    const handleDateChange = (selectedDate) => {
-      const newAvailableTimes = updateTimes(selectedDate);
-      dispatch({type: 'UPDATE_TIMES', payload: newAvailableTimes});
-    }
+    const [ date, setDate ] = useState(new Date())
+    const [availableTimes, dispatch] = useReducer(reducer, initializeTimes(date));
     return (
       <>
       <div className='d-flex justify-content-evenly'>
           <div className='d-flex justify-content-between booking-wrapper'>
               <img className='image-container' src={photo1} alt='hero-image'/>
               <img className='image-container' src={photo2} alt='hero-image'/>
-              <BookingForm availableTimes={state.availableTimes} onDateChange={handleDateChange}/>
+              <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm}/>
           </div>
       </div>
       </>
