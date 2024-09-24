@@ -9,14 +9,14 @@ const CustomersSay = () => {
   return (
     <section id='testimonials'>
       <div className='testimonials-section'>
-        <div className='section-heading'>
-          <h1 className='heading'>TESTIMONIALS</h1>
-          <h2 className='subheading'>WHAT THE CUSTOMERS SAY ABOUT US</h2>
+        <div className='section-heading p-3'>
+          <h1>TESTIMONIALS</h1>
+          <h2>WHAT THE CUSTOMERS SAY ABOUT US</h2>
         </div>
 
         <div className='testimonials'>
             <div className='testimony'>
-              <img className='customer-img' src={customer1} alt='IRENE BAE' />
+              <img src={customer1} alt='IRENE BAE' />
               <div className='testimony-details'>
                 <h5>IRENE BAE</h5>
                 <ReactStars
@@ -33,7 +33,7 @@ const CustomersSay = () => {
             </div>
 
             <div className='testimony'>
-                <img className='customer-img' src={customer2} alt='KARINA' />
+                <img src={customer2} alt='KARINA' />
                 <div className='testimony-details'>
                   <h5>YU JIMIN</h5>
                   <ReactStars
@@ -50,7 +50,7 @@ const CustomersSay = () => {
             </div>
 
             <div className='testimony'>
-              <img className='customer-img' src={customer3} alt='KIM MINGYU' />
+              <img src={customer3} alt='KIM MINGYU' />
               <div className='testimony-details'>
                 <h5>KIM MINGYU</h5>
                 <ReactStars
@@ -67,7 +67,7 @@ const CustomersSay = () => {
             </div>
 
             <div className='testimony'>
-              <img className='customer-img' src={customer4} alt='HONG HAEIN' />
+              <img src={customer4} alt='HONG HAEIN' />
                 <div className='testimony-details'>
                   <h5>HONG HAEIN</h5>
                   <ReactStars
