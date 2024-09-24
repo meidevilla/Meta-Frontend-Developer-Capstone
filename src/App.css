@@ -5,10 +5,16 @@ body {
 	overflow-x: hidden;
 }
 
+a {
+  cursor: pointer;
+}
+
 header {
   display: flex;
   justify-content: center;
+  font-family: 'Karla', sans-serif, monospace;
 }
+
 nav  a {
   text-decoration: none;
   color: black;
@@ -30,25 +36,27 @@ nav li:hover, a:hover, ul:hover {
   font-weight: 800;
 }
 
+.colorGreen {
+  color: #008000;
+}
+
+section {
+  font-family: 'Markazi Text', sans-serif, monospace;
+}
+
 .hero-content {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-items: center;
   padding: 5% 10%;
-  font-family: 'Markazi Text', sans-serif, monospace;
 }
 
 .heading {
-  display: block; 
-  line-height: 1; 
-  font-weight: 700;
   font-size: 56px;
-  font-family: 'Markazi Text', sans-serif, monospace;
 }
 
 .subheading {
-  font-weight: 700;
   font-size: 45px;
   color: #008000;
 }
@@ -58,43 +66,49 @@ nav li:hover, a:hover, ul:hover {
   padding: 0;
   display: block; 
   line-height: 1; 
+  font-weight: 700;
+}
+
+.hero-content img {
+  max-width: 350px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
 }
 
 .hero-img {
   border-radius: 10% 0 10% 0;
-  rotate: 9deg;
+  rotate: 8deg;
 }
 
 .hero-description, .img-wrapper {
   width: 50%;
+  margin: 30px;
 }
 
-.hero-desc {
+.hero-content p {
   margin-top: 20px;
-  width: 75%;
+  width: 100%;
   font-weight: 400;
   font-size: 22px;
 }
 
-.reserve-a-table-button, .menu-button {
+.reserve-table-button, .menu-button {
   width: 100%;
   height: 40px;
   max-width: 180px;
   background-color: #F4CE14;
-  font-weight: 700;
-  font-family: 'Poppins', Courier, monospace;
+  font-weight: 900;
+  font-family: 'Karla', sans-serif, monospace;
   border-radius: 15px;
   border: none;
   padding: 8px;
 }
 
-.reserve-a-table-button:hover, .menu-button:hover {
-  cursor: pointer;
+.reserve-table-button:hover, .menu-button:hover {
   background-color: #008000;
   color: #ffffff;
 }
-
-/* specials */
 
 .specials-section {
   padding: 4% 10%;
@@ -108,30 +122,20 @@ nav li:hover, a:hover, ul:hover {
   align-items: center;
 }
 
+.customCard {
+  font-family: 'Karla', sans-serif, monospace;
+  margin: 0;
+  text-align: justify;
+  font-weight: 600;
+}
 
-.dish-name-price {
+.dish {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-weight: 700;
+  font-weight: 900;
   color: black;
   padding: 5px 0 5px 0;
-}
-
-.dish-price {
-  text-align: right;
-  color: #008000;
-
-}
-
-.dish-desc p, .dish-name-price p {
-  margin: 0;
-  text-align: justify;
-}
-
-.delivery-order:hover {
-  cursor: pointer;
-  color: #008000;
 }
 
 .delivery-order {
@@ -144,17 +148,15 @@ nav li:hover, a:hover, ul:hover {
   padding: 15px;
 }
 
-.delivery-order svg {
+.delivery-order:hover {
+  color: #008000;
+}
+
+.customCard svg {
   margin-left: 8px;
 }
-/* testimonials */
 
-.testimonials {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 30px 0 30px 0;
-}
+/* testimonials */
 
 .testimonials-section {
   display: flex;
@@ -162,17 +164,27 @@ nav li:hover, a:hover, ul:hover {
   padding: 2% 10%;
 }
 
-.section-heading > .heading {
-  color: #F4CE14;
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 0 30px 0;
+  font-family: 'Karla', Courier, monospace;
+}
+.section-heading {
+  font-weight: 900;
   text-align: center;
+}
+
+.section-heading h1{
+  color: #F4CE14;
   font-size: 64px;
 }
 
-.section-heading > .subheading {
-  font-size: 30px;
+.section-heading h2{
+  font-size: 35px;
   color: black;
-  text-align: center;
-  font-family: 'Poppins', Courier, monospace;
+  font-family: 'Karla', sans-serif, monospace;
   margin-bottom: 25px;
 }
 
@@ -180,7 +192,6 @@ nav li:hover, a:hover, ul:hover {
   display: flex;
   flex-direction: column;
   background-color: #495E57;
-  font-family: 'Markazi Text', Courier, monospace;
   align-items: center; 
   text-align: center; 
   position: relative;
@@ -192,8 +203,7 @@ nav li:hover, a:hover, ul:hover {
   max-width: 300px;
 }
 
-
-.customer-img {
+.testimony img{
   max-width: 70px;
   height: auto;
   border-radius: 50%;
@@ -214,11 +224,8 @@ nav li:hover, a:hover, ul:hover {
   align-items: center;
   justify-content: center;
   text-align: justify;
-  margin: 0 20px;
-  font-size: 20px;
-}
-
-.testimony-details p {
+  margin: 10px 20px;
+  font-size: 18px;
   margin-top: 10px;
 }
 
@@ -226,11 +233,10 @@ nav li:hover, a:hover, ul:hover {
 
 .about-section {
   padding: 4% 10%;
-  font-family: 'Markazi Text', Courier, monospace;
   background-color: #D9D9D9;
 }
 
-.about-section > p {
+.about-section p {
   text-align: right;
 }
 
@@ -238,6 +244,8 @@ nav li:hover, a:hover, ul:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .about-content img {
@@ -251,14 +259,16 @@ nav li:hover, a:hover, ul:hover {
 .about-content p {
   text-align: justify;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.2rem;
+  font-family: 'Karla', sans-serif, monospace;
 }
 
 /* footer */
 
 footer {
   background-color: #495E57;
-  font-family: 'Poppins', Courier, monospace;
+  font-family: 'Karla', sans-serif, monospace;
+  color: black;
 }
 
 .footer-content {
@@ -282,7 +292,7 @@ footer {
 .wrapper img {
   width: 100%;
   height: auto;
-  max-width: 60px;
+  max-width: 65px;
 }
 
 footer h4 {
@@ -291,7 +301,7 @@ footer h4 {
   color: #ffffff;
 }
 
-.sitemap ul, li, .social-links ul, li {
+footer ul, li {
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -300,30 +310,30 @@ footer h4 {
   padding: 0;
 }
 
-.sitemap a, .socials a {
+footer a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   margin: 0;
   padding: 0;
 }
 
-.sitemap a:hover, .socials a:hover {
+footer a:hover {
   color: #F4CE14; 
   text-decoration: underline; 
   font-weight: 800;
-}
-
-.contacts:hover {
-  color: #F4CE14; 
-  font-weight: 600;
 }
 
 .contacts {
   display: flex; 
   align-items: center; 
   padding: 10px 0 10px 0;
+}
+
+.contacts:hover {
+  color: #F4CE14; 
+  font-weight: 600;
 }
 
 .contacts p {
@@ -343,77 +353,14 @@ footer h4 {
   margin-right: 7px;
 }
 
+/* booking form */
 
-@media (max-width: 768px) {
-  header {
-    display: block
-  }
-  .img-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-content p
-  .hero-description {
-    width: 90%;
-  }
-
-  .hero-img {
-    width: 80%;
-    transform: rotate(-9deg);
-    margin-top: 10px;
-  }
-
-  .dish-desc p {
-    font-size: 12px;
-    font-weight: 600;
-    padding-top: 5px;
-  }
-
-  .testimonials-section {
-    margin-top: 10px;
-  }
-  .testimonials {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .testimony {
-    flex: 1 1 calc(50% - 10px); 
-    margin: 5px;
-    margin-bottom: 50px;
-  }
-  .about-content {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-  }
-  .about-content p {
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  .about-content img {
-    margin-top: 10px;
-  }
-  .sitemap, .sitemap h4, .social-links h4 {
-    text-align: right;
-  }
-  .social-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-end;
-  }
-  .socials svg {
-    margin-right: 0;
-  }
-  .image-container {
-    display: none;
-  }
+.booking-wrapper {
+  display: 'flex';
+  align-items: center;
 }
 
-/* booking form */
-.image-container {
+.booking-wrapper img {
   width: 370px; 
   height: 500px; 
   overflow: hidden; 
@@ -437,7 +384,167 @@ form h3 {
   text-align: center;
 }
 
-main {
-  font-family: 'Poppins', sans-serif, monospace;
+@media (max-width: 992px) {
+  .img-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-content p, .hero-description {
+    width: 90%;
+  }
+  .hero-img {
+    width: 80%;
+    transform: rotate(-8deg);
+    margin-top: 10px;
+  }
+  .customCard {
+    font-size: 0.94rem;
+  }
+  .testimonials {
+    display: flex;
+    justify-content: center;
+  }
+  .testimony {
+    flex: 1 1 calc(50% - 10px); 
+    margin: 25px;
+    margin-bottom: 50px;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-content p {
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: justify;
+  }
+  .about-content img {
+    margin: 10px 0 10px 0;
+    width: 100%;
+  }
+  .socials svg {
+    margin: 0 2px 10px 0px;
+    color: #D9D9D9;
+    font-size: 30px;
+  }
+  .booking-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .booking-wrapper img {
+    width: 300px;
+    height: 500px;
+    object-fit: contain;
+  }
+  .bookingConfirmation h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    display: block;
+  }
+  .customCard {
+    font-size: 0.8rem;
+  }
+  footer h4, a {
+    text-align: right;
+  }
+  .contact-us h4 {
+    text-align: left;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .booking-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-description h1 {
+    font-size: 2.5rem;
+  }
+  .hero-description h2 {
+    font-size: 2.2rem;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: row ;
+  }
+  .img-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-description p {
+    font-size: 1.4rem;
+  }
+  .customCard {
+    font-size: 0.66rem;
+  }
+  .testimonials {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-heading h2 {
+    font-size: 1.6rem;
+  }
+  .testimony {
+    flex: 1 1 calc(50% - 10px); 
+    margin: 5px;
+    margin-bottom: 50px;
+  }
+  .social-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .socials svg {
+    margin-right: 0;
+  }
+  .booking-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .bookingConfirmation h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-description h1 {
+    font-size: 1.8rem;
+  }
+  .hero-description h2 {
+    font-size: 1.8rem;
+  }
+  .hero-description p {
+    font-size: 1rem;
+  }
+  .hero-content button {
+    width: 80%;
+  }
+  .hero-content p, .hero-description {
+    width: 100%;
+  }
+  .testimonials {
+    display: flex;
+    justify-content: center;
+  }
+  .testimony {
+    flex: 1 1 100%; 
+    margin-bottom: 40px;
+  }
 }
 
