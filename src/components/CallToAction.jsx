@@ -14,8 +14,8 @@ const CallToAction = () => {
             <button className='reserve-table-button'> Reserve a Table </button>
         </div>
         <div className='img-wrapper container-fluid'>
-            <img className='img-fluid hero-img' src={heroImage1} alt='hero-image'/>
-            <img className='img-fluid hero-img ms-3' src={heroImage2} alt='hero-image'/>
+            <img className='hero-img' src={heroImage1} alt='hero-image'/>
+            <img className='hero-img ms-3' src={heroImage2} alt='hero-image'/>
         </div>
       </div>
     </section>
