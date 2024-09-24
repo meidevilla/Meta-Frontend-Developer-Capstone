@@ -15,12 +15,12 @@ const Specials = () => {
             <div className='cards'>
                 <div className='row pt-2'>
                     <div className='col-12 col-sm-6 col-md-4 mb-4'>
-                        <div className='card' style={{ borderRadius: '10%'}}>
+                        <div className='card customCard' style={{ borderRadius: '10%'}}>
                             <img className='card-img-top' style={{ borderTopLeftRadius: '10%', borderTopRightRadius: '10%' }} src={greekSalad} alt='greek salad' />
                             <div className='card-body'>
-                            <div className='dish-name-price'>
+                            <div className='dish'>
                                 <p className='card-title'>Greek Salad</p>
-                                <p className='dish-price'>$12.99</p>
+                                <p className='dish-price colorGreen'>$12.99</p>
                             </div>
                             <div className='dish-desc'>
                                 <p>A greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, 
@@ -33,12 +33,12 @@ const Specials = () => {
                     </div>
 
                     <div className='col-12 col-sm-6 col-md-4 mb-4'>
-                        <div className='card' style={{ borderRadius: '10%' }}>
+                        <div className='card customCard' style={{ borderRadius: '10%' }}>
                             <img className='card-img-top' style={{ borderTopLeftRadius: '10%', borderTopRightRadius: '10%' }} src={bruschetta} alt='bruschetta' />
                             <div className='card-body'>
-                                <div className='dish-name-price'>
+                                <div className='dish'>
                                     <p className='card-title dish-name'>Bruchetta</p>
-                                    <p className='dish-price'>$5.99</p>
+                                    <p className='dish-price colorGreen'>$5.99</p>
                                 </div>
                                 <div className='dish-desc'>
                                     <p>Our Bruschetta is made from grilled bread that has been smeared with garlic 
@@ -51,12 +51,12 @@ const Specials = () => {
                     </div>
 
                     <div className='col-12 col-sm-6 col-md-4 mb-4'>
-                        <div className='card' style={{ borderRadius: '10%' }}>
+                        <div className='card customCard' style={{ borderRadius: '10%' }}>
                             <img className='card-img-top' style={{ borderTopLeftRadius: '10%', borderTopRightRadius: '10%' }} src={lemonDessert} alt='lemon dessert' />
                             <div className='card-body'>
-                                <div className='dish-name-price'>
+                                <div className='dish'>
                                     <p className='dish-name'>Lemon Dessert</p>
-                                    <p className='dish-price'>$5.00</p>
+                                    <p className='dish-price colorGreen'>$5.00</p>
                                 </div>
                                 <div className='dish-desc'>
                                     <p>This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as 
