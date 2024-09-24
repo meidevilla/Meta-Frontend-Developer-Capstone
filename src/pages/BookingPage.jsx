@@ -46,13 +46,13 @@ const BookingPage = () => {
   }, [date]);
 
   return (
-    <div className='d-flex justify-content-evenly'>
+    <main className='d-flex justify-content-evenly'>
       <div className='d-flex justify-content-between booking-wrapper'>
         <img className='image-container' src={photo1} alt='hero-image' />
         <img className='image-container' src={photo2} alt='hero-image' />
         <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
       </div>
-    </div>
+    </main>
   );
 };
 

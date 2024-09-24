@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { HiMenu } from 'react-icons/hi';
 import logo from '../assets/logo-little-lemon.jpg';
 
 const Nav = () => {
@@ -10,7 +9,7 @@ const Nav = () => {
         <a className="navbar-brand" href="#">
           <img src={logo} alt="Little Lemon Logo" style={{ height: '40px', marginRight: '1rem' }} />
         </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">

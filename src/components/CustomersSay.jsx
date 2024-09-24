@@ -3,7 +3,7 @@ import customer1 from '../assets/customer-1.jpg'
 import customer2 from '../assets/customer-2.jpg'
 import customer3 from '../assets/customer-3.jpg'
 import customer4 from '../assets/customer-4.jpeg'
-import ReactStars from 'react-rating-stars-component';
+import ReactStars from 'react-stars'
 
 const CustomersSay = () => {
   return (

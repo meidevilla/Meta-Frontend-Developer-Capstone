@@ -1,15 +1,15 @@
 import React from 'react';
+import { FaCircleCheck } from "react-icons/fa6";
 
 const BookingConfirmationPage = () => {
   return (
-    <main style={{ padding: '20px', textAlign: 'center' }}>
-      <h1>Booking Confirmation</h1>
-      <p>Thank you for your booking!</p>
-      <p>Your reservation has been confirmed.</p>
+    <main className='d-flex flex-column p-5 m-5 align-items-center'>
+      <FaCircleCheck style={{ fontSize: "60px", color: "green"}} />
+      <h1 className='mb-3'><strong>Reservation Confirmed</strong></h1>
+      <p>We are pleased to inform you that your reservation
+        request <strong>has been received and confirmed.</strong>
+      </p>
       <p>If you have any questions, feel free to contact us.</p>
-      <button onClick={() => window.location.href = '/'} style={{ padding: '10px 20px', marginTop: '20px' }}>
-        Go to Homepage
-      </button>
     </main>
   );
 }
