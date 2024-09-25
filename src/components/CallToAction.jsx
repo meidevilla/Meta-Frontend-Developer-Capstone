@@ -10,7 +10,8 @@ const CallToAction = () => {
             <h1 className='heading'>Little Lemon</h1>
             <h2 className='subheading'>Chicago</h2>
             <p>We are a family owned Mediterranean restaurant, located on Maldove Street in Chicago, Illionis. 
-                We focus on traditional recipes served with a modern twist.</p>
+                We focus on traditional recipes served with a modern twist.
+            </p>
             <button className='reserve-table-button' role="button"> Reserve a Table </button>
         </div>
         <div className='img-wrapper container-fluid'>
