@@ -11,7 +11,7 @@ const CallToAction = () => {
             <h2 className='subheading'>Chicago</h2>
             <p>We are a family owned Mediterranean restaurant, located on Maldove Street in Chicago, Illionis. 
                 We focus on traditional recipes served with a modern twist.</p>
-            <button className='reserve-table-button'> Reserve a Table </button>
+            <button className='reserve-table-button' role="button"> Reserve a Table </button>
         </div>
         <div className='img-wrapper container-fluid'>
             <img className='hero-img' src={heroImage1} alt='hero-image'/>
